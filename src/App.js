@@ -9,6 +9,7 @@ import QuizCard from "./components/QuizCard/QuizCard";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Topics from "./components/Topics/Topics";
+import Blog from "./components/Blog/Blog";
 function App() {
   const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ function App() {
         {
           path: "/quiz",
           element: <QuizCard></QuizCard>,
+        },
+        {
+          path: "/blog",
+          element: <Blog></Blog>,
         },
         {
           path: "/quiz/:quizId",
