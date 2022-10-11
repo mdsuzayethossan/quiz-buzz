@@ -1,11 +1,20 @@
 import React from "react";
-
+import { toast } from "react-toastify";
 const QuizCard = ({ question, questionsIndex }) => {
+  const handleViewAnswer = () => {
+    toast.info(`Correct Answer: ${question.correctAnswer}`);
+  };
   const { options } = question;
-  const handleQuestionCheck = () => {};
+  const handleQuestionCheck = (option) => {
+    if (option === question.correctAnswer) {
+      toast.success("Correct Answer", { autoClose: 800 });
+    } else {
+      toast.error("Incorrect Answer", { autoClose: 800 });
+    }
+  };
   return (
     <div className="mx-auto max-w-xl shadow p-10 rounded-xl my-7 relative">
-      <span className="absolute right-3">
+      <span className="absolute right-3" onClick={handleViewAnswer}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -30,11 +39,12 @@ const QuizCard = ({ question, questionsIndex }) => {
         <span className="font-bold text-gray-700 mr-2">
           Question {questionsIndex + 1}:
         </span>{" "}
-        {question.question}
+        {question.question.replace(/(<([^>]+)>)/gi, "")}
       </h3>
 
-      {options.map((option) => (
+      {options.map((option, index) => (
         <div
+          key={index}
           onClick={() => handleQuestionCheck(option)}
           className={`form-control shadow rounded-full p-4 mb-5 bg-gray-50`}
         >

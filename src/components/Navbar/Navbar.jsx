@@ -6,7 +6,9 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar">
           <div className="flex-1">
-            <a className="btn btn-ghost normal-case text-xl">QuizBuzz</a>
+            <NavLink to="/" className="btn btn-ghost normal-case text-xl">
+              QuizBuzz
+            </NavLink>
           </div>
           <div className="flex-none">
             <div className="hidden md:block">
