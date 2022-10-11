@@ -35,7 +35,7 @@ const QuizCard = ({ question, questionsIndex }) => {
 
       {options.map((option) => (
         <div
-          onClick={() => handleQuestionCheck()}
+          onClick={() => handleQuestionCheck(option)}
           className={`form-control shadow rounded-full p-4 mb-5 bg-gray-50`}
         >
           <label className="flex items-center cursor-pointer">
@@ -44,7 +44,7 @@ const QuizCard = ({ question, questionsIndex }) => {
               name="radio-6"
               className="radio checked:bg-red-500"
             />
-            <span className="ml-7">Red pill heldo sfjso dfskhdso </span>
+            <span className="ml-7">{option}</span>
           </label>
         </div>
       ))}
