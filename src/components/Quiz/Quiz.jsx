@@ -9,9 +9,13 @@ const Quiz = () => {
         Quiz of {quiz.data.name}
       </h2>
       <div className="quiz-container">
-        {/* {quiz.data.questions.map((question) => (
-          <QuizCard question={question} key={question.id}></QuizCard>
-        ))} */}
+        {quiz.data.questions.map((question, questionsIndex) => (
+          <QuizCard
+            question={question}
+            key={question.id}
+            questionsIndex={questionsIndex}
+          ></QuizCard>
+        ))}
       </div>
     </div>
   );
