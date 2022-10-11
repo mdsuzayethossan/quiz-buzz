@@ -51,7 +51,7 @@ const QuizCard = ({ question, questionsIndex }) => {
           <label className="flex items-center cursor-pointer">
             <input
               type="radio"
-              name="radio-6"
+              name={`radio${question.id}`}
               className="radio checked:bg-red-500"
             />
             <span className="ml-7">{option}</span>

@@ -7,7 +7,7 @@ const Card = ({ topic }) => {
     topicNavigate(`/quiz/${topic.id}`);
   };
   return (
-    <div className="card w-96 bg-gray-200 shadow-xl">
+    <div className="card bg-gray-200 shadow-xl">
       <figure className="px-10 pt-10">
         <img src={topic.logo} alt="Shoes" className="rounded-xl" />
       </figure>
