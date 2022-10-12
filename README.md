@@ -9,12 +9,16 @@ Hosted in Netlify -> [QuizBuzz](https://suzayet-react-quiz-website.netlify.app/)
   - /blog
   - /statistics
   - /quiz/:quizId
+  * /topics
 - /home
   - Header section with banner
   - Quiz Topics
 - /blog
   - some important questions and answers
 - /quiz/:quizId
-  - Topics base quiz
+  - Topic base quiz. Select correct option. Then a toast will be fire to notify you. Your question true or false.
 - /statistics
-  - recharts with total quiz on topics
+  - Recharts with total quiz on topics
+
+* /topics
+  - All quiz item here. Click Start Practice button to start quiz exam.
