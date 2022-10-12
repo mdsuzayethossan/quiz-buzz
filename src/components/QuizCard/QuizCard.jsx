@@ -39,7 +39,8 @@ const QuizCard = ({ question, questionsIndex }) => {
         <span className="font-bold text-gray-700 mr-2">
           Question {questionsIndex + 1}:
         </span>{" "}
-        {question.question.replace(/(<([^>]+)>)/gi, "")}
+        {question.question}
+        {/* {question.question.replace(/(<([^>]+)>)/gi, "")} */}
       </h3>
 
       {options.map((option, index) => (

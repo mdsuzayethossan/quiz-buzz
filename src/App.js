@@ -1,16 +1,14 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import Main from "./components/Layouts/Main";
-import Banner from "./components/Banner/Banner";
 import Error from "./components/Error/Error";
 import Home from "./components/Home/Home";
 import Quiz from "./components/Quiz/Quiz";
-import QuizCard from "./components/QuizCard/QuizCard";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Topics from "./components/Topics/Topics";
 import Blog from "./components/Blog/Blog";
 import Statistics from "./components/Statistics/Statistics";
+import Topics from "./components/Topics/Topics";
 function App() {
   const router = createBrowserRouter([
     {
