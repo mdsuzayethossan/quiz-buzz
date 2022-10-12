@@ -19,7 +19,10 @@ const Banner = () => {
               experiences and select those skills from the lists. To select a
               skill, click the checkbox beside it.
             </p>
-            <Link className="px-6 btn-primary py-2 text-white transition ease-in duration-200 uppercase rounded-full border-2 border-red-500 focus:outline-none">
+            <Link
+              to="/topics"
+              className="px-6 btn-primary py-2 text-white transition ease-in duration-200 uppercase rounded-full border-2 border-red-500 focus:outline-none"
+            >
               Get Started
             </Link>
           </div>
