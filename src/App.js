@@ -14,21 +14,24 @@ function App() {
     {
       path: "/",
       element: <Main></Main>,
+      loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
       errorElement: <Error></Error>,
       children: [
         {
           path: "/",
           element: <Home></Home>,
-          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
         },
         {
           path: "/home",
           element: <Home></Home>,
-          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
         },
         {
           path: "/blog",
           element: <Blog></Blog>,
+        },
+        {
+          path: "/topics",
+          element: <Topics></Topics>,
         },
         {
           path: "/statistics",
