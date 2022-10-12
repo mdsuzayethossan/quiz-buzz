@@ -1,6 +1,7 @@
 import React from "react";
 import Lottie from "lottie-react";
 import quiz from "../../assets/quiz";
+import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <section>
@@ -18,9 +19,9 @@ const Banner = () => {
               experiences and select those skills from the lists. To select a
               skill, click the checkbox beside it.
             </p>
-            <button className="px-6 btn-primary py-2 text-white transition ease-in duration-200 uppercase rounded-full border-2 border-red-500 focus:outline-none">
-              Start Practice
-            </button>
+            <Link className="px-6 btn-primary py-2 text-white transition ease-in duration-200 uppercase rounded-full border-2 border-red-500 focus:outline-none">
+              Get Started
+            </Link>
           </div>
         </div>
       </div>
