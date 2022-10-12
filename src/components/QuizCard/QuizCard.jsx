@@ -1,6 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
-const QuizCard = ({ question, questionsIndex }) => {
+const QuizCard = ({ question, questionsIndex, correctAns, SetCorrectAns }) => {
   const handleViewAnswer = () => {
     toast.info(`Correct Answer: ${question.correctAnswer}`);
   };
@@ -8,6 +8,7 @@ const QuizCard = ({ question, questionsIndex }) => {
   const handleQuestionCheck = (option) => {
     if (option === question.correctAnswer) {
       toast.success("Correct Answer", { autoClose: 800 });
+      SetCorrectAns(correctAns + 1);
     } else {
       toast.error("Incorrect Answer", { autoClose: 800 });
     }
@@ -46,11 +47,11 @@ const QuizCard = ({ question, questionsIndex }) => {
       {options.map((option, index) => (
         <div
           key={index}
-          onClick={() => handleQuestionCheck(option)}
           className={`form-control shadow rounded-full p-4 mb-5 bg-gray-50`}
         >
           <label className="flex items-center cursor-pointer">
             <input
+              onClick={() => handleQuestionCheck(option)}
               type="radio"
               name={`radio${question.id}`}
               className="radio checked:bg-red-500"
