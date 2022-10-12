@@ -8,7 +8,7 @@ const Navbar = () => {
           <div className="flex-1">
             <NavLink
               to="/"
-              className="btn btn-ghost normal-case hover:bg-transparent text-xl text-primary"
+              className="btn btn-ghost font-bold normal-case hover:bg-transparent text-xl text-primary"
             >
               QuizBuzz
             </NavLink>
