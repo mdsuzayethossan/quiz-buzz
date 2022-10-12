@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Topics from "./components/Topics/Topics";
 import Blog from "./components/Blog/Blog";
+import Statistics from "./components/Statistics/Statistics";
 function App() {
   const router = createBrowserRouter([
     {
@@ -28,12 +29,13 @@ function App() {
           loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
         },
         {
-          path: "/quiz",
-          element: <QuizCard></QuizCard>,
-        },
-        {
           path: "/blog",
           element: <Blog></Blog>,
+        },
+        {
+          path: "/statistics",
+          element: <Statistics></Statistics>,
+          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
         },
         {
           path: "/quiz/:quizId",

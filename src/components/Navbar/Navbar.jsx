@@ -6,7 +6,10 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar">
           <div className="flex-1">
-            <NavLink to="/" className="btn btn-ghost normal-case text-xl">
+            <NavLink
+              to="/"
+              className="btn btn-ghost normal-case hover:bg-transparent text-xl text-primary"
+            >
               QuizBuzz
             </NavLink>
           </div>
@@ -31,7 +34,7 @@ const Navbar = () => {
             <div className="dropdown dropdown-end md:hidden">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img src="https://placeimg.com/80/80/people" />
+                  <img src="https://i.ibb.co/2ZmhjwQ/md-suzayet-hossan.jpg" />
                 </div>
               </label>
               <ul
