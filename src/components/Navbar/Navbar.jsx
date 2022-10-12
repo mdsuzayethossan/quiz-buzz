@@ -17,16 +17,44 @@ const Navbar = () => {
             <div className="hidden md:block">
               <ul className="flex gap-8 font-semibold">
                 <li>
-                  <NavLink to="/home">Home</NavLink>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-primary" : ""
+                    }
+                    to="/home"
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/blog">Blog</NavLink>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-primary" : ""
+                    }
+                    to="/blog"
+                  >
+                    Blog
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/statistics">Statistics</NavLink>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-primary" : ""
+                    }
+                    to="/statistics"
+                  >
+                    Statistics
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/topics">Topics</NavLink>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-primary" : ""
+                    }
+                    to="/topics"
+                  >
+                    Topics
+                  </NavLink>
                 </li>
               </ul>
             </div>
