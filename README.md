@@ -1,5 +1,5 @@
 Project Name: QuizBuzz
-Live Link:
+Live Link: https://suzayet-react-quiz-website.netlify.app/
 
 - A simple Navbar with dynamic route
   - /home
