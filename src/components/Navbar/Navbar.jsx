@@ -56,6 +56,26 @@ const Navbar = () => {
                     Topics
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-primary" : ""
+                    }
+                    to="/practice"
+                  >
+                    Practice
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-primary" : ""
+                    }
+                    to="/try-it"
+                  >
+                    Try It
+                  </NavLink>
+                </li>
               </ul>
             </div>
 
@@ -80,6 +100,12 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink to="/topics">Topics</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/practice">Practice</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/try-it">Try It</NavLink>
                 </li>
               </ul>
             </div>

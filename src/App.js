@@ -9,12 +9,16 @@ import "react-toastify/dist/ReactToastify.css";
 import Blog from "./components/Blog/Blog";
 import Statistics from "./components/Statistics/Statistics";
 import Topics from "./components/Topics/Topics";
+import Practice from "./components/Practice/Practice";
+import StateForm from "./components/StateForm";
+import UpdateUser from "./components/UpdateUser";
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
-      loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+      loader: async () =>
+        await fetch("https://openapi.programming-hero.com/api/quiz"),
       errorElement: <Error></Error>,
       children: [
         {
@@ -32,6 +36,22 @@ function App() {
         {
           path: "/topics",
           element: <Topics></Topics>,
+        },
+        // {
+        //   path: "/practice",
+        //   element: <Practice></Practice>,
+        //   loader: () => fetch("http://localhost:5000/users"),
+        // },
+        {
+          path: "/try-it",
+          element: <StateForm></StateForm>,
+          loader: () => fetch("http://localhost:5000/users"),
+        },
+        {
+          path: "/user-update/:id",
+          element: <UpdateUser></UpdateUser>,
+          loader: ({ params }) =>
+            fetch(`http://localhost:5000/users/${params.id}`),
         },
         {
           path: "/statistics",
